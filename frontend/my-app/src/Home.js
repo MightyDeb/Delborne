@@ -11,6 +11,9 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
+import ResponsiveAppBar from './components/navbar';
+import ResponsiveFooter from './components/footer';
+import { BrowserRouter as Router,  Route, Routes} from 'react-router-dom';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -69,9 +72,16 @@ function Home() {
 
   return (
     <div className="Home">
-      <FullScreenDialog />
-      <p>HOME</p>
-    </div>
+      <Router>
+    <ResponsiveAppBar />
+    <FullScreenDialog />
+
+      <p>
+        home
+      </p>
+    <ResponsiveFooter/>
+    </Router>   
+      </div>
   );
 }
 
