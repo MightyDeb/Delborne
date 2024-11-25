@@ -70,7 +70,7 @@ function Home() {
   return (
     <div className="Home">
       <FullScreenDialog />
-      <p>HOME</p>
+      <p>home2</p>
     </div>
   );
 }
